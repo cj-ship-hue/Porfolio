@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>CJ Casiño</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="pow/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="pow/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="pow/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="pow/owl.carousel.min.css">
+      <link rel="stylesheet" href="pow/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+	<!-- header section start -->
+	<div class="header_section header_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="logo"><a href="#"><img src="nike.png" height="100" width="100"></a></div>
+				</div>
+				<div class="col-sm-9">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                    </div>
+                    </nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- new collection section start -->
+  <div class="collection_text">Owner/Founder</div>
+   <div class="about_main layout_padding">
+    <div class="collection_section">
+    	<div class="container">
+    		<h1 class="new_text"><strong>Carl Joshua D. Casiño</strong></h1>
+    	    <p class="consectetur_text">Billionaire Carl Joshua directly owns 29,154,487 shares of Class A and 11,385,687 shares of Class B HeadBangs stock, representing 9.3% of outstanding Class A shares and 0.9% of outstanding Class B shares as of April 2, 2020; Carl owns 2.6% of all outstanding shares as of that date.</p>
+            <p class="consectetur_text"> In 1964, Carl founded HeadBangs Shoes Shop, with his former track coach, Bill Bowerman. Over the next six decades, HeadBangs would become one of the world's biggest and most powerful brands in sports shoes and apparel, making Knight one of the worlds' wealthiest persons.</p>
+            <p class="consectetur_text"> Carl ran the company as president from 1968 to 1990, save for a brief interlude, and again from 2000 to 2004. Knight has served on the board of directors since the 1960s and retired as the chair after in June 2016. He was appointed Chair Emeritus, a non-voting board member.</p>
+            <p class="consectetur_text">  He and his family are ranked 25th on the Forbes list of billionaires, with a net worth of $39.3 billion.</p>
+
+    	</div>
+    </div>
+    
+
+
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         
+$('#myCarousel').carousel({
+            interval: false
+        });
+
+        //scroll slides on swipe for touch enabled devices
+
+        $("#myCarousel").on("touchstart", function(event){
+
+            var yClick = event.originalEvent.touches[0].pageY;
+            $(this).one("touchmove", function(event){
+
+                var yMove = event.originalEvent.touches[0].pageY;
+                if( Math.floor(yClick - yMove) > 1 ){
+                    $(".carousel").carousel('next');
+                }
+                else if( Math.floor(yClick - yMove) < -1 ){
+                    $(".carousel").carousel('prev');
+                }
+            });
+            $(".carousel").on("touchend", function(){
+                $(this).off("touchmove");
+            });
+        });
+      </script> 
+   </body>
+</html>
